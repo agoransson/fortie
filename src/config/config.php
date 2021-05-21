@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 /*
 
-   Copyright 2015 Andreas Göransson
+   Copyright The Fortie authors
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -19,26 +19,26 @@
 */
 
 return [
+    'default' => [
+        // Your specific access token
+        'access_token' => 'your-access-token-here',
 
-  'default' => [
+        // Your specific client secret
+        'client_secret' => 'your-client-secret-here',
 
-    // Your specific access token
-    'access_token'  => 'your-access-token-here',
+        // The type you're sending
+        'content_type' => 'application/json',
 
-    // Your specific client secret
-    'client_secret' => 'your-client-secret-here',
+        // The type you're accepting as response
+        'accepts' => 'application/json',
 
-    // The type you're sending
-    'content_type'  => 'application/json',
+        // The URL to the Fortnox API
+        'endpoint' => 'url-to-fortnox-api',
 
-    // The type you're accepting as response
-    'accepts'       => 'application/json', 
+        // Rate limit (number of requests per second)
+        'rate_limit' => 4,
 
-    // The URL to the Fortnox API
-    'endpoint'      => 'url-to-fortnox-api',
-
-    // Rate limit (number of requests per second)
-    'rate_limit'  => 4,
-  ],
-
+        // Transport
+        'transport' => IGuzzleTransportImpl::class,
+    ],
 ];
